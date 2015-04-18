@@ -4,7 +4,7 @@
 
 from dateutil.parser import parse as dateparse
 import json
-def parse():
+def parse(file):
 	'''
 	Player data is keyed by player name as used in Tyler's master ledger. 
 	The value in the playerData dict is another dict with the following 
@@ -13,7 +13,7 @@ def parse():
 	'numWins'-> number of wins
 	'''
 	playerData={}
-	mFile=open('master.csv','r')
+	mFile=open(file,'r')
 	# Skip first two lines in file
 	mFile.readline();
 	mFile.readline();
@@ -65,8 +65,11 @@ def saveJSON(playerData):
 
 
 if __name__ == '__main__':
-    playerData=parse()
-    print playerData['Rachel']['games']
+    playerData=parse('master.csv')
+    print playerData['Josh']['games']
+    print playerData['Josh']['opponent']
+    print playerData['Josh']['dates']
+    print sum(playerData['Josh']['games'])
     saveJSON(playerData)
 
 
