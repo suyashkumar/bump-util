@@ -2,7 +2,5 @@
 **analyze:** 
 A set of tools for bumper pool data analysis at Duke University. A parse utility (parse.py) is used to parse the existing ledger of all recorded games into a useful json data format. In progress. 
 
-**bump-explore:**
-Has been moved to its own repo! 
+Check out **bump-explore**, a Flask/Angular application that lets players explore their data (using the bump-util package). 
 
-![](/images/bump-explorerecord.gif)
