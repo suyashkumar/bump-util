@@ -2,7 +2,7 @@
 # @author: Suyash Kumar
 # Parses Bumper Pool data from ledger into a nice json data structure
 
-from dateutil.parser import parse as dateparse
+#from dateutil.parser import parse as dateparse
 import json
 def parse(file):
 	'''
