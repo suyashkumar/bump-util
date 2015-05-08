@@ -39,7 +39,7 @@ def calculateElo(file):
 		if (len(name.split(" "))>1):
 			# Repeat games!
 			repeat=int(name.split(" ")[1])
-			print repeat , "Repeat Games"
+			#print repeat , "Repeat Games"
 			for i in xrange(0,repeat):
 				updateElo(playerOne,playerTwo,playerElos, currentDate)
 		
@@ -70,7 +70,7 @@ def updateElo(playerOne,playerTwo,playerElos,currentDate):
 	# Update player Elos
 	deltaEloPlayerOne=getK(Ra)*(1-Ea)
 	deltaEloPlayerTwo=getK(Rb)*(0-(1-Ea))
-	print getK(Ra)
+	#print getK(Ra)
 
 	playerElos[playerOne]['currentElo']=Ra+deltaEloPlayerOne
 	playerElos[playerTwo]['currentElo']=Rb+deltaEloPlayerTwo
