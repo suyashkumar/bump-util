@@ -1,3 +1,3 @@
-from bump_util import *
+import bump_util
 
 
