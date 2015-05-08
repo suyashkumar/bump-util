@@ -98,12 +98,12 @@ Returns eloHistory with every day filled in from start date to end date
 def getFullEloHistory(playerElos, player):
 	playerDates=playerElos[player]['eloHistory'].keys()
 	playerDates.sort(key=lambda date:datetime.datetime.strptime(date,"%m/%d/%Y")) # Sort Dates
-	fullEloHistory={}
+	fullEloHistory=[]
 	delta = datetime.timedelta(days=1) # One delta
 	for i in xrange(0,len(playerDates)-1):
 		# Add current day and elo to history
 		currentElo=playerElos[player]['eloHistory'][playerDates[i]]
-		fullEloHistory[playerDates[i]]=currentElo		
+		fullEloHistory.append([playerDates[i],currentElo])		
 		# If next day in list is more than 1 day away, fill in missing days with 
 		# copies of the current day's elo
 		current_date=datetime.datetime.strptime(playerDates[i],'%m/%d/%Y')
@@ -111,7 +111,7 @@ def getFullEloHistory(playerElos, player):
 		if (next_date-delta != current_date):
 			current_date+=delta # Increment to next day
 			while current_date<next_date:
-				fullEloHistory[current_date.strftime('%m/%d/%Y')]=currentElo
+				fullEloHistory.append([current_date.strftime('%m/%d/%Y'),currentElo])
 				current_date+=delta # Increment day
 	return fullEloHistory
 
@@ -139,8 +139,5 @@ if __name__=='__main__':
 		print playerElos[players[i]]['currentElo']
 	'''
 	fullEloHistory=getFullEloHistory(playerElos,'Tyler')
-	dates=fullEloHistory.keys()
-	dates.sort(key=lambda date:datetime.datetime.strptime(date,"%m/%d/%Y")) # Sort String dates 
-	for date in dates:
-		print date
+	print fullEloHistory
 	
