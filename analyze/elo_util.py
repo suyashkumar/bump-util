@@ -146,12 +146,12 @@ if __name__=='__main__':
 	for date in dates:
 		print date
 		
-	'''
+	
 	players=playerElos.keys()
 	for i in xrange(0,len(playerElos)-1):
 		print players[i]
 		print playerElos[players[i]]['currentElo']
-	'''
+
 	fullEloHistory=getFullEloHistory(playerElos,'Tyler')
-	print fullEloHistory
+	#print fullEloHistory
 	
