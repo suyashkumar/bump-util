@@ -1,0 +1,97 @@
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util}{}\section{bump\+\_\+util.\+elo.\+elo\+\_\+util Namespace Reference}
+\label{namespacebump__util_1_1elo_1_1elo__util}\index{bump\+\_\+util.\+elo.\+elo\+\_\+util@{bump\+\_\+util.\+elo.\+elo\+\_\+util}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a6f5e864e37ad79f2dfb4910f59188102}{calculate\+Elo} (file)
+\item 
+def \hyperlink{namespacebump__util_1_1elo_1_1elo__util_ac44eb649027f2ed4fa495515f97b3a23}{update\+Elo} (player\+One, player\+Two, \hyperlink{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}{player\+Elos}, current\+Date)
+\item 
+def \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a44018b0cdcec41d0c9109f7d779499f6}{get\+K} (current\+Elo)
+\item 
+def \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a07ac56703ceb5594ff35397f7563dcc0}{get\+Full\+Elo\+History} (\hyperlink{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}{player\+Elos}, player)
+\item 
+def \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a8be8ac03c6f890c84ae28773f8f26ace}{unix\+\_\+time} (dt)
+\item 
+def \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a38113faef2d41311faad067c9fcfa48e}{unix\+\_\+time\+\_\+millis} (dt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespacebump__util_1_1elo_1_1elo__util_ab17f3f7dc79c0595109f66423f82f9e9}{ranked\+List} = \mbox{[}\textquotesingle{}Tyler\textquotesingle{},\textquotesingle{}Kaighn\textquotesingle{},\textquotesingle{}Will\textquotesingle{},\textquotesingle{}Jorge\textquotesingle{},\textquotesingle{}Henry\textquotesingle{},\textquotesingle{}James\textquotesingle{},\textquotesingle{}Shaunak\textquotesingle{},\textquotesingle{}Adil\textquotesingle{},\textquotesingle{}Jonah\textquotesingle{},\textquotesingle{}Kaustav\textquotesingle{},\textquotesingle{}Mehul\textquotesingle{},\textquotesingle{}Jeremy\textquotesingle{},\textquotesingle{}Brian\textquotesingle{},\textquotesingle{}Emma\textquotesingle{},\textquotesingle{}Eddie\textquotesingle{},\textquotesingle{}Scoots\textquotesingle{},\textquotesingle{}Mithun\textquotesingle{},\textquotesingle{}Jacob\textquotesingle{},\textquotesingle{}Jason\textquotesingle{},\textquotesingle{}Lizzie\textquotesingle{},\textquotesingle{}Alex\textquotesingle{},\textquotesingle{}Murphy\textquotesingle{},\textquotesingle{}Sanford\textquotesingle{},\textquotesingle{}Ben\textquotesingle{},\textquotesingle{}Lyon\textquotesingle{},\textquotesingle{}Bryce\textquotesingle{},\textquotesingle{}Josh\textquotesingle{},\textquotesingle{}Matty\+P\textquotesingle{},\textquotesingle{}Nick\textquotesingle{},\textquotesingle{}Sahil\textquotesingle{},\textquotesingle{}Rachel\textquotesingle{},\textquotesingle{}Yitaek\textquotesingle{},\textquotesingle{}Sachin\textquotesingle{},\textquotesingle{}Papa\+Bear\textquotesingle{},\textquotesingle{}Graeme\textquotesingle{},\textquotesingle{}Suyash\textquotesingle{}\mbox{]}
+\item 
+tuple \hyperlink{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}{player\+Elos} = \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a6f5e864e37ad79f2dfb4910f59188102}{calculate\+Elo}(\textquotesingle{}master.\+csv\textquotesingle{})
+\item 
+list \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a444fb8e398767896cae1b9bdba47aff8}{dates} = \hyperlink{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}{player\+Elos}\mbox{[}\textquotesingle{}Tyler\textquotesingle{}\mbox{]}
+\item 
+tuple \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a15699928188d60536539e4b3acee209d}{players} = player\+Elos.\+keys()
+\item 
+tuple \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a8f3f6c9505d9bffc58e28f8e6ec1ba4e}{full\+Elo\+History} = \hyperlink{namespacebump__util_1_1elo_1_1elo__util_a07ac56703ceb5594ff35397f7563dcc0}{get\+Full\+Elo\+History}(\hyperlink{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}{player\+Elos},\textquotesingle{}Tyler\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a6f5e864e37ad79f2dfb4910f59188102}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!calculate\+Elo@{calculate\+Elo}}
+\index{calculate\+Elo@{calculate\+Elo}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{calculate\+Elo}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+elo.\+elo\+\_\+util.\+calculate\+Elo (
+\begin{DoxyParamCaption}
+\item[{}]{file}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1elo_1_1elo__util_a6f5e864e37ad79f2dfb4910f59188102}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a07ac56703ceb5594ff35397f7563dcc0}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!get\+Full\+Elo\+History@{get\+Full\+Elo\+History}}
+\index{get\+Full\+Elo\+History@{get\+Full\+Elo\+History}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{get\+Full\+Elo\+History}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+elo.\+elo\+\_\+util.\+get\+Full\+Elo\+History (
+\begin{DoxyParamCaption}
+\item[{}]{player\+Elos, }
+\item[{}]{player}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1elo_1_1elo__util_a07ac56703ceb5594ff35397f7563dcc0}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a44018b0cdcec41d0c9109f7d779499f6}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!get\+K@{get\+K}}
+\index{get\+K@{get\+K}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{get\+K}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+elo.\+elo\+\_\+util.\+get\+K (
+\begin{DoxyParamCaption}
+\item[{}]{current\+Elo}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1elo_1_1elo__util_a44018b0cdcec41d0c9109f7d779499f6}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a8be8ac03c6f890c84ae28773f8f26ace}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!unix\+\_\+time@{unix\+\_\+time}}
+\index{unix\+\_\+time@{unix\+\_\+time}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{unix\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+elo.\+elo\+\_\+util.\+unix\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{}]{dt}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1elo_1_1elo__util_a8be8ac03c6f890c84ae28773f8f26ace}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a38113faef2d41311faad067c9fcfa48e}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!unix\+\_\+time\+\_\+millis@{unix\+\_\+time\+\_\+millis}}
+\index{unix\+\_\+time\+\_\+millis@{unix\+\_\+time\+\_\+millis}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{unix\+\_\+time\+\_\+millis}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+elo.\+elo\+\_\+util.\+unix\+\_\+time\+\_\+millis (
+\begin{DoxyParamCaption}
+\item[{}]{dt}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1elo_1_1elo__util_a38113faef2d41311faad067c9fcfa48e}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_ac44eb649027f2ed4fa495515f97b3a23}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!update\+Elo@{update\+Elo}}
+\index{update\+Elo@{update\+Elo}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{update\+Elo}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+elo.\+elo\+\_\+util.\+update\+Elo (
+\begin{DoxyParamCaption}
+\item[{}]{player\+One, }
+\item[{}]{player\+Two, }
+\item[{}]{player\+Elos, }
+\item[{}]{current\+Date}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1elo_1_1elo__util_ac44eb649027f2ed4fa495515f97b3a23}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a444fb8e398767896cae1b9bdba47aff8}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!dates@{dates}}
+\index{dates@{dates}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{dates}]{\setlength{\rightskip}{0pt plus 5cm}list bump\+\_\+util.\+elo.\+elo\+\_\+util.\+dates = {\bf player\+Elos}\mbox{[}\textquotesingle{}Tyler\textquotesingle{}\mbox{]}}\label{namespacebump__util_1_1elo_1_1elo__util_a444fb8e398767896cae1b9bdba47aff8}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a8f3f6c9505d9bffc58e28f8e6ec1ba4e}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!full\+Elo\+History@{full\+Elo\+History}}
+\index{full\+Elo\+History@{full\+Elo\+History}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{full\+Elo\+History}]{\setlength{\rightskip}{0pt plus 5cm}tuple bump\+\_\+util.\+elo.\+elo\+\_\+util.\+full\+Elo\+History = {\bf get\+Full\+Elo\+History}({\bf player\+Elos},\textquotesingle{}Tyler\textquotesingle{})}\label{namespacebump__util_1_1elo_1_1elo__util_a8f3f6c9505d9bffc58e28f8e6ec1ba4e}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!player\+Elos@{player\+Elos}}
+\index{player\+Elos@{player\+Elos}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{player\+Elos}]{\setlength{\rightskip}{0pt plus 5cm}tuple bump\+\_\+util.\+elo.\+elo\+\_\+util.\+player\+Elos = {\bf calculate\+Elo}(\textquotesingle{}master.\+csv\textquotesingle{})}\label{namespacebump__util_1_1elo_1_1elo__util_ad86bc16b39f702552f41a83c392584ab}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_a15699928188d60536539e4b3acee209d}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!players@{players}}
+\index{players@{players}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{players}]{\setlength{\rightskip}{0pt plus 5cm}tuple bump\+\_\+util.\+elo.\+elo\+\_\+util.\+players = player\+Elos.\+keys()}\label{namespacebump__util_1_1elo_1_1elo__util_a15699928188d60536539e4b3acee209d}
+\hypertarget{namespacebump__util_1_1elo_1_1elo__util_ab17f3f7dc79c0595109f66423f82f9e9}{}\index{bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}!ranked\+List@{ranked\+List}}
+\index{ranked\+List@{ranked\+List}!bump\+\_\+util\+::elo\+::elo\+\_\+util@{bump\+\_\+util\+::elo\+::elo\+\_\+util}}
+\subsubsection[{ranked\+List}]{\setlength{\rightskip}{0pt plus 5cm}list bump\+\_\+util.\+elo.\+elo\+\_\+util.\+ranked\+List = \mbox{[}\textquotesingle{}Tyler\textquotesingle{},\textquotesingle{}Kaighn\textquotesingle{},\textquotesingle{}Will\textquotesingle{},\textquotesingle{}Jorge\textquotesingle{},\textquotesingle{}Henry\textquotesingle{},\textquotesingle{}James\textquotesingle{},\textquotesingle{}Shaunak\textquotesingle{},\textquotesingle{}Adil\textquotesingle{},\textquotesingle{}Jonah\textquotesingle{},\textquotesingle{}Kaustav\textquotesingle{},\textquotesingle{}Mehul\textquotesingle{},\textquotesingle{}Jeremy\textquotesingle{},\textquotesingle{}Brian\textquotesingle{},\textquotesingle{}Emma\textquotesingle{},\textquotesingle{}Eddie\textquotesingle{},\textquotesingle{}Scoots\textquotesingle{},\textquotesingle{}Mithun\textquotesingle{},\textquotesingle{}Jacob\textquotesingle{},\textquotesingle{}Jason\textquotesingle{},\textquotesingle{}Lizzie\textquotesingle{},\textquotesingle{}Alex\textquotesingle{},\textquotesingle{}Murphy\textquotesingle{},\textquotesingle{}Sanford\textquotesingle{},\textquotesingle{}Ben\textquotesingle{},\textquotesingle{}Lyon\textquotesingle{},\textquotesingle{}Bryce\textquotesingle{},\textquotesingle{}Josh\textquotesingle{},\textquotesingle{}Matty\+P\textquotesingle{},\textquotesingle{}Nick\textquotesingle{},\textquotesingle{}Sahil\textquotesingle{},\textquotesingle{}Rachel\textquotesingle{},\textquotesingle{}Yitaek\textquotesingle{},\textquotesingle{}Sachin\textquotesingle{},\textquotesingle{}Papa\+Bear\textquotesingle{},\textquotesingle{}Graeme\textquotesingle{},\textquotesingle{}Suyash\textquotesingle{}\mbox{]}}\label{namespacebump__util_1_1elo_1_1elo__util_ab17f3f7dc79c0595109f66423f82f9e9}

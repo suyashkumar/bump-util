@@ -1,0 +1,67 @@
+\hypertarget{namespacebump__util_1_1bump__util}{}\section{bump\+\_\+util.\+bump\+\_\+util Namespace Reference}
+\label{namespacebump__util_1_1bump__util}\index{bump\+\_\+util.\+bump\+\_\+util@{bump\+\_\+util.\+bump\+\_\+util}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacebump__util_1_1bump__util_a5acbe32daf1dc325c25f389660042335}{json\+Load} (path)
+\begin{DoxyCompactList}\small\item\em Loads stored player\+Data in json format, returns dict of player data. \end{DoxyCompactList}\item 
+def \hyperlink{namespacebump__util_1_1bump__util_a3c39ef3dcda4be5a3f0c2ccbb573d5a2}{player\+Compare} (player\+One, player\+Two, \hyperlink{namespacebump__util_1_1bump__util_a476803a0585b05a795f63b956ca0a0cf}{player\+Data})
+\begin{DoxyCompactList}\small\item\em Returns a dict of win values and dates comparing player\+One to player\+Two (from player\+One\textquotesingle{}s perspective) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacebump__util_1_1bump__util_a476803a0585b05a795f63b956ca0a0cf}{player\+Data} = parse.\+parse(\textquotesingle{}parsing/master.\+csv\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacebump__util_1_1bump__util_a5acbe32daf1dc325c25f389660042335}{}\index{bump\+\_\+util\+::bump\+\_\+util@{bump\+\_\+util\+::bump\+\_\+util}!json\+Load@{json\+Load}}
+\index{json\+Load@{json\+Load}!bump\+\_\+util\+::bump\+\_\+util@{bump\+\_\+util\+::bump\+\_\+util}}
+\subsubsection[{json\+Load}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+bump\+\_\+util.\+json\+Load (
+\begin{DoxyParamCaption}
+\item[{}]{path}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1bump__util_a5acbe32daf1dc325c25f389660042335}
+
+
+Loads stored player\+Data in json format, returns dict of player data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The filepath (String) to the json file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+player\+Data dict with loaded player data 
+\end{DoxyReturn}
+\hypertarget{namespacebump__util_1_1bump__util_a3c39ef3dcda4be5a3f0c2ccbb573d5a2}{}\index{bump\+\_\+util\+::bump\+\_\+util@{bump\+\_\+util\+::bump\+\_\+util}!player\+Compare@{player\+Compare}}
+\index{player\+Compare@{player\+Compare}!bump\+\_\+util\+::bump\+\_\+util@{bump\+\_\+util\+::bump\+\_\+util}}
+\subsubsection[{player\+Compare}]{\setlength{\rightskip}{0pt plus 5cm}def bump\+\_\+util.\+bump\+\_\+util.\+player\+Compare (
+\begin{DoxyParamCaption}
+\item[{}]{player\+One, }
+\item[{}]{player\+Two, }
+\item[{}]{player\+Data}
+\end{DoxyParamCaption}
+)}\label{namespacebump__util_1_1bump__util_a3c39ef3dcda4be5a3f0c2ccbb573d5a2}
+
+
+Returns a dict of win values and dates comparing player\+One to player\+Two (from player\+One\textquotesingle{}s perspective) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+One} & String name (key) for first player \\
+\hline
+{\em player\+Two} & String name (key) for second player \\
+\hline
+{\em player\+Data} & the dict holding all player data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dict with win values and dates for all games played by player\+One against player\+Two (in that perspective only) 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacebump__util_1_1bump__util_a476803a0585b05a795f63b956ca0a0cf}{}\index{bump\+\_\+util\+::bump\+\_\+util@{bump\+\_\+util\+::bump\+\_\+util}!player\+Data@{player\+Data}}
+\index{player\+Data@{player\+Data}!bump\+\_\+util\+::bump\+\_\+util@{bump\+\_\+util\+::bump\+\_\+util}}
+\subsubsection[{player\+Data}]{\setlength{\rightskip}{0pt plus 5cm}tuple bump\+\_\+util.\+bump\+\_\+util.\+player\+Data = parse.\+parse(\textquotesingle{}parsing/master.\+csv\textquotesingle{})}\label{namespacebump__util_1_1bump__util_a476803a0585b05a795f63b956ca0a0cf}

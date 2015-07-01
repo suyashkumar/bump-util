@@ -39,7 +39,7 @@ def calculateElo(file):
 		if (len(name.split(" "))>1):
 			# Repeat games!
 			repeat=int(name.split(" ")[1])
-			print repeat , "Repeat Games"
+			#print repeat , "Repeat Games"
 			for i in xrange(0,repeat):
 				updateElo(playerOne,playerTwo,playerElos, currentDate)
 		
@@ -70,7 +70,7 @@ def updateElo(playerOne,playerTwo,playerElos,currentDate):
 	# Update player Elos
 	deltaEloPlayerOne=getK(Ra)*(1-Ea)
 	deltaEloPlayerTwo=getK(Rb)*(0-(1-Ea))
-	print getK(Ra)
+	#print getK(Ra)
 
 	playerElos[playerOne]['currentElo']=Ra+deltaEloPlayerOne
 	playerElos[playerTwo]['currentElo']=Rb+deltaEloPlayerTwo
@@ -100,25 +100,39 @@ def getFullEloHistory(playerElos, player):
 	playerDates.sort(key=lambda date:datetime.datetime.strptime(date,"%m/%d/%Y")) # Sort Dates
 	fullEloHistory=[]
 	delta = datetime.timedelta(days=1) # One delta
-	for i in xrange(0,len(playerDates)-1):
+	for i in xrange(0,len(playerDates)-2):
 		# Add current day and elo to history
 		currentElo=playerElos[player]['eloHistory'][playerDates[i]]
-		fullEloHistory.append([playerDates[i],currentElo])		
+		#fullEloHistory.append([playerDates[i],currentElo])		
+
 		# If next day in list is more than 1 day away, fill in missing days with 
 		# copies of the current day's elo
 		current_date=datetime.datetime.strptime(playerDates[i],'%m/%d/%Y')
 		next_date=datetime.datetime.strptime(playerDates[i+1],'%m/%d/%Y')
+		fullEloHistory.append([unix_time_millis(current_date),currentElo])		
+		
 		if (next_date-delta != current_date):
 			current_date+=delta # Increment to next day
 			while current_date<next_date:
-				fullEloHistory.append([current_date.strftime('%m/%d/%Y'),currentElo])
+				#fullEloHistory.append([current_date.strftime('%m/%d/%Y'),currentElo])
+				fullEloHistory.append([unix_time_millis(current_date),currentElo])
+
 				current_date+=delta # Increment day
+	# Add Last day
+	last_date=datetime.datetime.strptime(playerDates[-1],'%m/%d/%Y')
+	fullEloHistory.append([unix_time_millis(last_date),playerElos[player]['currentElo']])
 	return fullEloHistory
 
 		
 				
 	
-	
+def unix_time(dt):
+	epoch = datetime.datetime.utcfromtimestamp(0)
+	delta = dt - epoch
+	return delta.total_seconds()
+
+def unix_time_millis(dt):
+	return unix_time(dt) * 1000.0	
 	 
  
 		
@@ -127,17 +141,17 @@ if __name__=='__main__':
 	playerElos=calculateElo('master.csv')
 	#print playerElos
 	#print playerElos['Tyler']['eloHistory']
-	'''dates=playerElos['Tyler']['eloHistory'].keys()
-	dates.sort(key=lambda date:datetime.strptime(date,"%m/%d/%Y")) # Sort String dates 
+	dates=playerElos['Tyler']['eloHistory'].keys()
+	dates.sort(key=lambda date:datetime.datetime.strptime(date,"%m/%d/%Y")) # Sort String dates 
 	for date in dates:
 		print date
-	'''	
-	'''
+		
+	
 	players=playerElos.keys()
 	for i in xrange(0,len(playerElos)-1):
 		print players[i]
 		print playerElos[players[i]]['currentElo']
-	'''
+
 	fullEloHistory=getFullEloHistory(playerElos,'Tyler')
-	print fullEloHistory
+	#print fullEloHistory
 	
