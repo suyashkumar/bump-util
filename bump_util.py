@@ -54,7 +54,7 @@ def singleInfo(player, playerData, csvPath):
         returnData: dict holding playerData and eloHistory for player. 
     """
     pData=playerData[player] # Get information for this player
-    playerElos=elo_util.calculateElos(csvPath) # Recalc all Elos TODO: will be replaced by database read allowing for periodic recalcs 
+    playerElos=elo_util.calculateElo(csvPath) # Recalc all Elos TODO: will be replaced by database read allowing for periodic recalcs 
     pElo=elo_util.getFullEloHistory(playerElos,player) # Get ELO history for this player
     returnData={'pData':pData, 'pElo':pElo} # Return dictionary holding player info
     return returnData
